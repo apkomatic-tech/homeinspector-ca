@@ -1,0 +1,137 @@
+@import './../config/_config.scss';
+@import './../config/_typography.scss';
+
+.header {
+    background-color: $color1;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    z-index: 1001;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        span {
+            font-family: $headingFontStack;
+            color: $color2;
+            font-size: 1.1rem;
+            @media only screen and (max-width: 767px) {
+                font-size: 1rem;
+            }
+        }
+        img {
+            width: 55px;
+            margin-right: 10px;
+        }
+    }
+
+    &__mobile-toggle {
+        color: $white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 992px) {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: capitalize;
+
+            &:not(.call-now) {
+                border-bottom: 2px solid transparent;
+                padding: .5rem 0;
+                margin-right: 1rem;
+                color: rgba($white, .75);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active,
+            &:hover {
+                color: $color2;
+                border-color: $color2;
+            }
+
+            &.call-now {
+                border-radius: 0;
+                border: 1px solid $color2;
+                color: $color2;
+                margin-left: 1.5rem;
+            }
+
+            &.call-now:hover {
+                background: $color2;
+                color: $white;
+                border-color: $color2;
+            }
+        }
+    }
+}
+
+.mobile-nav {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-125%);
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: darken($color1, 18%);
+    display: flex;
+    flex-direction: column;
+
+
+    transition: transform 400ms ease-in-out;
+
+    &.open {
+        transform: translateY(70px);
+    }
+
+    a {
+        color: lighten($color2, 30%);
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1.25rem .25rem;
+        border-bottom: 1px solid rgba($color2, .15);
+        text-transform: uppercase;
+        order: 1;
+
+        &:hover {
+            background-color: rgba($color1, .15);
+        }
+
+        &.call-now {
+            border-radius: 0;
+            border: 0;
+            background-color: $color2;
+            color: $black;
+            order: -1;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        display: none!important;
+    }
+}

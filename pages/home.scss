@@ -1,0 +1,79 @@
+@import './../config/_index.scss';
+
+$heroBackgroundColor: rgba(scale_color($color1, $lightness: -60%), .8);
+
+.hero {
+    border-radius: 0;
+    margin-bottom: 0;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    background-color: $black;
+    background-image: linear-gradient($heroBackgroundColor, $heroBackgroundColor), url('/static/img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    z-index: 1;
+
+    &__heading {
+        font-family: $headingFontStack;
+        font-size: 4rem;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 3rem;
+
+        @media only screen and (min-width: 992px) and (max-width: 1100px) {
+            font-size: 3rem;
+        }
+
+        @media only screen and (max-width: 991px) {
+            font-size: 2rem;
+        }
+
+        &:after {
+            content: "";
+            width: 6rem;
+            position: absolute;
+            top: calc(100% + 1rem);
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            height: 5px;
+            background-color: $white;
+        }
+    }
+
+    &__lead {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        @media only screen and (min-width: 992px) and (max-width: 1100px) {
+            font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width: 991px) {
+            font-size: 1.2rem;
+        }        
+    }
+
+    &__cta {
+
+        border-radius: 2px;
+        background-color: $color3;
+        border-color: $color3;
+
+        &:hover {
+            background-color: darken($color3, 15%);
+            border-color: darken($color3, 15%);
+        }
+    }
+
+    &__attribution {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+    }
+}

@@ -1,0 +1,28 @@
+@import './../config/_index.scss';
+
+.ftr {
+    padding: 2rem 0 1rem;
+    background-color: $color1;
+    &__info {
+
+    }
+
+    &__contact {
+
+        @media only screen and (min-width: 767px) {
+            text-align: right;
+        }
+
+        .fa {
+            color: $color1;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba($white, .1);
+    }
+}
