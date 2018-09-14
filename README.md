@@ -1,0 +1,5 @@
+## About Home Inspectors of California
+
+At Home Inspectors California, we are dedicated to setting the standard in affordability, professionalism, and efficiency in the home inspection business. We understand that every real estate transaction is different, each property is unique. Our goal is to give you the best price for your property inspection. As certified members of the International Association of Certified Home Inspectors, we also believe that educating our clients clearly and transparently about the purchase or sale they are considering is a considerable quality. Knowledge only can help to make informed decisions. We will provide you with an honest evaluation of the house or condo so you can make the right decision. The home inspection business is very personal. It is based a lot on the individual personalities and abilities of the inspector. We want our clients to feel like family, and from our family to yours, we are bringing peace of mind back to your home.
+
+**URL** https://homeinspectorscalifornia.com
